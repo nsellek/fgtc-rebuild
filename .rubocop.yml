@@ -1,0 +1,26 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "vender/**/*"
+    - "tmp/**/*"
+    - ".git/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
