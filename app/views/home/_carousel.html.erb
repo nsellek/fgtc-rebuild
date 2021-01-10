@@ -1,0 +1,32 @@
+<div id="home-main-carousel" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#home-main-carousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#home-main-carousel" data-bs-slide-to="1"></li>
+    <li data-bs-target="#home-main-carousel" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag 'https://via.placeholder.com/1920x1080?text=First+Slide',
+                    class: 'd-block w-xs-100 w-sm-100 w-md-100 w-lg-75 mx-auto'
+      %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'https://via.placeholder.com/1920x1080?text=Second+Slide',
+                    class: 'd-block w-xs-100 w-sm-100 w-md-100 w-lg-75 mx-auto'
+      %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'https://via.placeholder.com/1920x1080?text=Third+Slide',
+                    class: 'd-block w-xs-100 w-sm-100 w-md-100 w-lg-75 mx-auto'
+      %>
+    </div>
+  </div>
+  <a href="#home-main-carousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a href="#home-main-carousel" class="carousel-control-next" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>

@@ -1,1 +1,50 @@
-<span>hello world</span>
+<%= render 'carousel' %>
+
+<div class="container d-grid gap-3">
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 class="card-title text-danger">Welcome to FGTC!</h3>
+          <br>
+          <p class="card-text">
+            FGTC was reestablished in April 2007, under the new management,
+            FGTC has flourished. We offer quality gymnastics classes for both
+            recreational and competitive gymnasts. With over 75 years of combined
+            gymnastics experience, our coaches are all safety certified and
+            professional members of USA Gymnastics, the sole governing body of
+            gymnastics in the US.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow text-center">
+        <div class="card-body">
+          <h4 class="card-title text-danger">2020-2021 School Year Session</h4>
+          <p class="card-text">
+            <%= button_to 'Enroll Now!',
+                          'https://app.iclasspro.com/portal/floridagymnasticstrainingcenter/classes',
+                          class: 'btn btn-danger btn-lg rounded-pill'
+            %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-sm-12" style="height: 500px; background-color: aqua;">
+      <%= render 'calender' %>
+    </div>
+
+    <div class="col-lg-6 col-sm-12" style="height: 500px; background-color: tomato">
+      <%= render 'instagram_feed' %>
+    </div>
+
+    <div class="col-lg-6 col-sm-12" style="height: 500px; background-color: purple">
+      <%= render 'facebook_feed' %>
+    </div>
+  </div>
+</div>

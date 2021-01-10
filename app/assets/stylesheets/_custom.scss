@@ -1,0 +1,11 @@
+$red: #c00;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @each $size, $length in map-get(map-get($utilities, 'width'), 'values') {
+    @include media-breakpoint-up($breakpoint) {
+      .w-#{$breakpoint}-#{$size} {width: $length !important;}
+    }
+  }
+}
