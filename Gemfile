@@ -27,10 +27,6 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
-
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
