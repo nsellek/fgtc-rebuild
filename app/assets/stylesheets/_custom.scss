@@ -9,3 +9,11 @@ $red: #c00;
     }
   }
 }
+
+body {
+  background: image-url('fgtc-background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
