@@ -1,0 +1,72 @@
+<nav id="sidenav" class="bg-primary text-white">
+  <div class="p-4 pt-5">
+    <h1
+      class="fw-bold text-center border-bottom border-white pb-4"
+    >
+      FGTC Admin
+    </h1>
+
+    <ul class="list-unstyled">
+      <li class="<%= 'active' if active_page %>">
+        <a
+          href="#pagesMenu"
+          class="dropdown-toggle collapsed"
+          data-bs-toggle="collapse"
+          aria-expanded="false"
+        >
+          <i class="fas fa-file"></i>
+          Pages
+        </a>
+        <ul class="list-unstyled collapse <%= 'show' if active_page %>" id="pagesMenu">
+          <% pages.each do |page| %>
+            <li class="<%= 'active' if page.name == active_page&.name %>">
+              <%= link_to page.name,
+                          admin_page_path(page)
+              %>
+            </li>
+          <% end %>
+          <li>
+            <%= link_to 'Create Page',
+                        '#!',
+                        data: {
+                          bs_toggle: 'modal',
+                          bs_target: '#create-page-modal'
+                        }
+            %>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#!"><i class="fas fa-sliders-h"></i> Settings</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="create-page-modal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Page</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <%= form_for :page, url: admin_pages_path do |f| %>
+        <%= f.hidden_field :active, value: false %>
+        <div class="modal-body">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+          <div id="post_nameHelp" class="form-text">This is how it will display on the navbar.</div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            Close
+          </button>
+          <%= f.submit 'Save Page', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

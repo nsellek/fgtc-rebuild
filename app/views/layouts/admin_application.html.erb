@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FGTC</title>
+    <title>FGTC Admin</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="https://kit.fontawesome.com/22e630a654.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('torch.png') %>
   </head>
 
-  <body id="clients">
-    <%= render 'components/navbar' %>
-    <%= yield %>
-    <%= render 'components/footer' %>
+  <body id="admin">
+    <%= render 'admin/components/sidenav', pages: @pages, active_page: @page %>
+    <div id="main-container" class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

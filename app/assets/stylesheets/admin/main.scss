@@ -1,0 +1,15 @@
+@import 'sidenav';
+
+& {
+  display: flex;
+  align-items: stretch;
+  width: 100%
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}

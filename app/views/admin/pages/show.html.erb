@@ -1,0 +1,28 @@
+<h3 class="mt-5"><%= @page.name %></h3>
+
+<div class="row g-3">
+  <div class="col-md-3 col-xl-2">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Page Info</h5>
+        <p class="card-text text-center">
+          <%= button_tag 'Active',
+                          disabled: true,
+                          class: @page.active ? 'btn btn-success' : 'btn btn-secondary'
+          %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-10 col-xl-10">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Page</h5>
+        <div class="card-text">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

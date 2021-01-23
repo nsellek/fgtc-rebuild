@@ -1,0 +1,37 @@
+#sidenav {
+  max-width: 260px;
+  min-width: 260px;
+
+  ul {
+    li {
+      font-size: 16px;
+
+      a {
+        padding: 10px 0;
+        display: block;
+        color: rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+      }
+
+      &.active > a {
+        color: #fff;
+      }
+
+      > ul {
+        margin-left: 10px;
+
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    &::after {
+      float: right;
+      transform: translateY(270%);
+    }
+  }
+}
