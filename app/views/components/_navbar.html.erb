@@ -19,12 +19,12 @@
     <div class="collapse navbar-collapse" id="main-nav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <%= link_to 'Home', root_path, class: 'nav-link active fs-5' %>
+          <%= link_to 'Home', root_path, class: "nav-link fs-5 #{'active' if page.nil?}" %>
         </li>
         <li class="nav-item dropdown">
           <a
             href="#"
-            class="nav-link dropdown-toggle fs-5"
+            class="nav-link dropdown-toggle fs-5 <%= 'active' if dropdown == 'about' %>"
             id="aboutDropdown"
             role="button"
             data-bs-toggle="dropdown"
@@ -32,15 +32,30 @@
             About
           </a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a href="#!" class="dropdown-item">About Us</a></li>
-            <li><a href="#!" class="dropdown-item">Our Location</a></li>
-            <li><a href="#!" class="dropdown-item">Testimonials</a></li>
+            <li>
+              <%= link_to 'About Us',
+                          about_path(page: 'about_us'),
+                          class: 'dropdown-item'
+              %>
+            <li>
+            <li>
+              <%= link_to 'Our Location',
+                          about_path(page: 'location'),
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Testimonials',
+                          about_path(page: 'testimonials'),
+                          class: 'dropdown-item'
+              %>
+            </li>
           </ul>
         </li>
         <li class="nav-item dropdown">
           <a
             href="#"
-            class="nav-link dropdown-toggle fs-5"
+            class="nav-link dropdown-toggle fs-5 <%= 'active' if dropdown == 'classes' %>"
             id="classesDropdown"
             role="button"
             data-bs-toggle="dropdown"
@@ -49,14 +64,49 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="classesDropdown">
             <li><span class="dropdown-header">Gymnastics Classes</span></li>
-            <li><a href="#!" class="dropdown-item">Programs Overview</a></li>
-            <li><a href="#!" class="dropdown-item">School Year Recreational Program</a></li>
-            <li><a href="#!" class="dropdown-item">Summer Recreational Program</a></li>
+            <li>
+              <%= link_to 'Programs Overview',
+                          classes_path(page: 'programs-overview'),
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'School Year Recreational Program',
+                          classes_path(page: 'school-rec-program'),
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Summer Recreational Program',
+                          classes_path(page: 'summer-rec-program'),
+                          class: 'dropdown-item'
+              %>
+            </li>
             <li><span class="dropdown-header">Camps</span></li>
-            <li><a href="#!" class="dropdown-item">Winter Break Camp</a></li>
-            <li><a href="#!" class="dropdown-item">Spring Break Camp</a></li>
-            <li><a href="#!" class="dropdown-item">Summer Camp</a></li>
-            <li><a href="#!" class="dropdown-item">School Year Day Camps</a></li>
+            <li>
+              <%= link_to 'Winter Break Camp',
+                          classes_path(page: 'winter-camp'),
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Spring Break Camp',
+                          classes_path(page: 'spring-camp'),
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Summer Camp',
+                          classes_path(page: 'summer-camp'),
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'School Year Day Camps',
+                          classes_path(page: 'school-day-camps'),
+                          class: 'dropdown-item'
+              %>
+            </li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -70,19 +120,43 @@
             Teams
           </a>
           <ul class="dropdown-menu" aria-labelledby="teamsDropdown">
-            <li><a href="#!" class="dropdown-item">Boys Competitive Teams</a></li>
-            <li><a href="#!" class="dropdown-item">Girls Competitive Teams</a></li>
-            <li><a href="#!" class="dropdown-item">Intensive Teams</a></li>
+            <li>
+              <%= link_to 'Boys Competitive Teams',
+                          '#!',
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Girls Competitive Teams',
+                          '#!',
+                          class: 'dropdown-item'
+              %>
+            </li>
+            <li>
+              <%= link_to 'Intensive Teams',
+                          '#!',
+                          class: 'dropdown-item'
+              %>
+            </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a href="#!" class="nav-link fs-5">Facility</a>
+          <%= link_to 'Facility',
+                      '#!',
+                      class: 'nav-link fs-5'
+          %>
         </li>
         <li class="nav-item">
-          <a href="#!" class="nav-link fs-5">Gallery</a>
+          <%= link_to 'Gallery',
+                      '#!',
+                      class: 'nav-link fs-5'
+          %>
         </li>
         <li class="nav-item">
-          <a href="#!" class="nav-link fs-5">Contact</a>
+          <%= link_to 'Contact',
+                      '#!',
+                      class: 'nav-link fs-5'
+          %>
         </li>
         <li class="nav-item dropdown">
           <a

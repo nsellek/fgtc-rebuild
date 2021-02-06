@@ -12,8 +12,10 @@
   </head>
 
   <body id="clients">
-    <%= render 'components/navbar' %>
-    <%= yield %>
+    <%= render 'components/navbar', page: @page, dropdown: @dropdown %>
+    <div class="main">
+      <%= yield %>
+    </div>
     <%= render 'components/footer' %>
   </body>
 </html>

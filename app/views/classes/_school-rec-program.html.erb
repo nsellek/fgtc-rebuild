@@ -1,0 +1,470 @@
+<div class="container d-grid gap-3">
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 class="card-title text-danger">School Year Recreational Program</h2>
+          <p class="card-text">
+            FGTC offers an array of gymnastics classes. Beginning with the Recreational
+            Programs where toddlers through highschoolers can build a solid foundation
+            for success. Our professionally trained staff has developed a curriculum
+            that is designed to develop each child’s gross motor skills, balance and
+            coordination in a fun, non-competitive environment which simultaneously
+            enhances cognitive, emotional, and social development. FGTC’s unique
+            curriculum is based on the development of the individual child. Our classes
+            are not only divided by a child’s age but by the child’s physical and social
+            abilities too. FGTC’s developmental curriculum offers classes beginning with
+            the Tiny Tumblers (parent-assisted) for toddlers; Little Flippers for
+            preschoolers; Beginners and Advanced for gradeschoolers; and Trampoline and
+            Tumbling for the middleschoolers and highschoolers. Those children whose
+            physical abilities have progressed beyond the Recreational Program are invited
+            to participate in the Competitive Program.
+            <div class="text-center">
+              <%= button_to 'Enroll Now!',
+                          'https://app.iclasspro.com/portal/floridagymnasticstrainingcenter/classes',
+                          class: 'btn btn-danger btn-lg rounded-pill'
+              %>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 class="card-title text-danger">Recreational Class Schedule</h2>
+          <h5 class="card-subtitle mb-2">August 31, 2020 - May 29, 2021</h5>
+          <% accordion = {
+            id: 'rec-class-schedule',
+            items: [
+              {
+                title: 'Tiny Tumblers',
+                duration: '45 minutes',
+                caption: 'The Tiny Tumblers class is a co-ed class that is parent assisted for ages walking to 2 year olds.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 2
+                  }
+                ],
+                rows: [
+                  [
+                    'Wednesday',
+                    '9:30am',
+                    '10:30am'
+                  ],
+                  [
+                    'Friday',
+                    '3:00pm',
+                    '4:00pm'
+                  ],
+                  [
+                    'Saturday',
+                    '9:00am',
+                    '10:00am'
+                  ]
+                ]
+              },
+              {
+                title: 'Little Flippers',
+                duration: '45 minutes',
+                caption: 'The Little Flippers class is a co-ed class for ages 3 - 4 year olds.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 6
+                  }
+                ],
+                rows: [
+                  [
+                    'Monday',
+                    '3:00pm',
+                    '4:00pm',
+                    '5:00pm',
+                    '6:00pm',
+                    nil,
+                    nil
+                  ],
+                  [
+                    'Tuseday',
+                    '3:00pm',
+                    '4:00pm',
+                    '5:00pm',
+                    '6:00pm',
+                    nil,
+                    nil
+                  ],
+                  [
+                    'Wednesday',
+                    '11:30am',
+                    '12:30pm',
+                    '3:00pm',
+                    '4:00pm',
+                    '5:00pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Thursday',
+                    '3:00pm',
+                    '4:00pm',
+                    '5:00pm',
+                    '6:00pm',
+                    nil,
+                    nil
+                  ],
+                  [
+                    'Friday',
+                    nil,
+                    nil,
+                    '5:00pm',
+                    '6:00pm',
+                    nil,
+                    nil
+                  ],
+                  [
+                    'Saturday',
+                    '11:00am',
+                    '12:00am',
+                    '1:00pm',
+                    nil,
+                    nil,
+                    nil
+                  ]
+                ]
+              },
+              {
+                title: 'Trampoline & Tumbling',
+                duration: '1 hour',
+                caption: 'The Trampoline and Tumbling class is a co-ed class for ages 12 and up.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Beginners'
+                  },
+                  {
+                    title: 'Advanced'
+                  }
+                ],
+                rows: [
+                  [
+                    'Monday',
+                    '4:15pm',
+                    nil
+                  ],
+                  [
+                    'Tuseday',
+                    nil,
+                    '5:30pm'
+                  ],
+                  [
+                    'Wednesday',
+                    '4:15pm',
+                    nil
+                  ],
+                  [
+                    'Thursday',
+                    nil,
+                    '5:30pm'
+                  ],
+                  [
+                    'Friday',
+                    '4:15pm',
+                    nil
+                  ]
+                ]
+              },
+              {
+                title: 'Junior Girls Beginner',
+                duration: '1 hour',
+                caption: 'These classes are available for girls ages 5 with little or no experience. Gymnastic skills are introduced and developed according to the guidelines of USAG (USA Gymnastics – the sole governing body of gymnastics in the US).',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 3
+                  }
+                ],
+                rows: [
+                  [
+                    'Monday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Tuseday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Wednesday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Thursday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Friday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Saturday',
+                    '9:15am',
+                    '10:30am',
+                    '11:45pm'
+                  ]
+                ]
+              },
+              {
+                title: 'Girls Beginner',
+                duration: '1 hour',
+                caption: 'These classes are available for girls ages 6-12 with little or no experience. Gymnastic skills are introduced and developed according to the guidelines of USAG (USA Gymnastics – the sole governing body of gymnastics in the US).',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 3
+                  }
+                ],
+                rows: [
+                  [
+                    'Monday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Tuseday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Wednesday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Thursday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Friday',
+                    '3:30pm',
+                    '4:45pm',
+                    '6:00pm'
+                  ],
+                  [
+                    'Saturday',
+                    '9:15am',
+                    '10:30am',
+                    '11:45pm'
+                  ]
+                ]
+              },
+              {
+                title: 'Girls Intermediate',
+                duration: '1 hour',
+                caption: 'This class is available for girls ages 8-12 with basic gymnastics experience. Students will be evaluated to obtain placement in this class.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 2
+                  }
+                ],
+                rows: [
+                  [
+                    'Monday',
+                    '4:00pm',
+                    '5:15pm'
+                  ],
+                  [
+                    'Wednesday',
+                    '4:00pm',
+                    '5:15pm'
+                  ],
+                  [
+                    'Friday',
+                    '4:00pm',
+                    '5:15pm'
+                  ],
+                  [
+                    'Saturday',
+                    '10:15am',
+                    '11:30am'
+                  ]
+                ]
+              },
+              {
+                title: 'Girls Advanced',
+                duration: '1 hour',
+                caption: 'This class is available for girls ages 8-12 with advanced gymnastics experience. Students will be evaluated to obtain placement in this class.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 2
+                  }
+                ],
+                rows: [
+                  [
+                    'Tuseday',
+                    '4:00pm',
+                    '5:15pm'
+                  ],
+                  [
+                    'Tuseday',
+                    '4:00pm',
+                    '5:15pm'
+                  ],
+                  [
+                    'Saturday',
+                    '9:00am',
+                    nil
+                  ]
+                ]
+              },
+              {
+                title: 'Boys Beginner',
+                duration: '1 hour',
+                caption: 'This class is available for boys ages 5-12 with little or no experience.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times',
+                    colspan: 2
+                  }
+                ],
+                rows: [
+                  [
+                    'Tuseday',
+                    '4:15pm',
+                    nil
+                  ],
+                  [
+                    'Thursday',
+                    '4:15pm',
+                    nil
+                  ],
+                  [
+                    'Saturday',
+                    '9:15pm',
+                    '10:30pm'
+                  ]
+                ]
+              },
+              {
+                title: 'Boys Intermediate',
+                duration: '1 hour',
+                caption: 'This class is available to boys ages 6-12 with basic gymnastics experience.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times'
+                  }
+                ],
+                rows: [
+                  [
+                    'Tuseday',
+                    '5:30pm'
+                  ],
+                  [
+                    'Thursday',
+                    '5:30pm'
+                  ]
+                ]
+              },
+              {
+                title: 'Dance Acro',
+                duration: '1 hour',
+                caption: 'Dance Acro is designed for girls ages 6-12 with dance experience.',
+                headers: [
+                  {
+                    title: 'Days'
+                  },
+                  {
+                    title: 'Times'
+                  }
+                ],
+                rows: [
+                  [
+                    'Wednesday',
+                    '5:30pm'
+                  ]
+                ]
+              },
+              {
+                title: 'Tuition & Uniform',
+                caption: 'Annual Registration Fee $50.00',
+                headers: [
+                  {
+                    title: 'Monthly Tuition',
+                    colspan: 2
+                  }
+                ],
+                rows: [
+                  [
+                    '1 class per week',
+                    '$95.00'
+                  ],
+                  [
+                    '2 classes per week',
+                    '$150.00'
+                  ],
+                  [
+                    '3 classes per week',
+                    '$205.00'
+                  ],
+                  [
+                    '4 classes per week',
+                    '$260.00'
+                  ],
+                  [
+                    '5 classes per week',
+                    '$315.00'
+                  ]
+                ]
+              }
+            ]
+          } %>
+
+          <%= render 'components/accordion_table', accordion: accordion %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

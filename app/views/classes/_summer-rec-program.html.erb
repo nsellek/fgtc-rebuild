@@ -1,0 +1,250 @@
+<div class="container d-grid gap-3">
+  <div class="row mt-3">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 class="card-title text-danger">Summer Recreational Program</h2>
+          <p class="card-text">
+            Our outstanding afternoon recreational classes are still available during the summer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 class="card-title text-danger">REGISTRATION OPENS FRIDAY, MAY 1, 2020</h2>
+          <h5 class="card-subtitle mb-2">July 1, 2021 - August 29, 2021</h5>
+          <% accordion = {
+              id: 'summer-class-schedule',
+              items: [
+                {
+                  title: 'Tiny Tumblers',
+                  duration: '(2-3 year olds)',
+                  caption: 'Due to the Coronavirus, the CDC guidelines for social distancing, and for the health and well-being of the children and our community, the Tiny Tumblers class will not be offered during the Summer Session.'
+                },
+                {
+                  title: 'Little Flippers',
+                  duration: '(3-4 year olds)',
+                  caption: 'Due to the Coronavirus, the CDC guidelines for social distancing, and for the health and well-being of the children and our community, the Little Flippers class will not be offered during the Summer Session.'
+                },
+                {
+                  title: "Girls Jr. Beginners",
+                  duration: '(5 year olds)',
+                  headers: [
+                    {
+                      title: 'Days'
+                    },
+                    {
+                      title: 'Times',
+                      colspan: 2
+                    }
+                  ],
+                  rows: [
+                    [
+                      'Monday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Tuesday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Wednesday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Tursday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Friday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Saturday',
+                      '9:00am',
+                      '10:15am'
+                    ]
+                  ]
+                },
+                {
+                  title: 'Girls Beginners',
+                  headers: [
+                    {
+                      title: 'Days'
+                    },
+                    {
+                      title: 'Times',
+                      colspan: 2
+                    }
+                  ],
+                  rows: [
+                    [
+                      'Monday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Tuesday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Wednesday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Tursday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Friday',
+                      '3:30pm',
+                      '4:45pm'
+                    ],
+                    [
+                      'Saturday',
+                      '9:00am',
+                      '10:15am'
+                    ]
+                  ]
+                },
+                {
+                  title: 'Girls Intermediate',
+                  duration: '(8-12 year olds)',
+                  headers: [
+                    {
+                      title: 'Days'
+                    },
+                    {
+                      title: 'Times',
+                      colspan: 2
+                    }
+                  ],
+                  rows: [
+                    [
+                      'Monday',
+                      '4:00pm'
+                    ],
+                    [
+                      'Wednesday',
+                      '4:00pm'
+                    ],
+                    [
+                      'Friday',
+                      '4:00pm'
+                    ],
+                    [
+                      'Saturday',
+                      '9:15am'
+                    ]
+                  ]
+                },
+                {
+                  title: 'Girls Advanced',
+                  duration: '(8-13 year olds)',
+                  headers: [
+                    {
+                      title: 'Days'
+                    },
+                    {
+                      title: 'Times',
+                      colspan: 2
+                    }
+                  ],
+                  rows: [
+                    [
+                      'Thursday',
+                      '4:00pm',
+                      '5:15pm'
+                    ]
+                  ]
+                },
+                {
+                  title: 'Boys Beginner',
+                  duration: '(6-12 year olds)',
+                  headers: [
+                    {
+                      title: 'Days'
+                    },
+                    {
+                      title: 'Times'
+                    }
+                  ],
+                  rows: [
+                    [
+                      'Tuesday',
+                      '4:00pm'
+                    ],
+                    [
+                      'Saturday',
+                      '9:00am'
+                    ]
+                  ]
+                },
+                {
+                  title: 'Boys Intermediate',
+                  duration: '(5-12 year olds)',
+                  headers: [
+                    {
+                      title: 'Days'
+                    },
+                    {
+                      title: 'Times'
+                    }
+                  ],
+                  rows: [
+                    [
+                      'Wednesday',
+                      '4:00pm'
+                    ]
+                  ]
+                },
+                {
+                  title: 'Tuition & Uniform',
+                  caption: 'Annual registration fee $50.00 ',
+                  headers: [
+                    {
+                      title: 'Summer Monthly Tuition',
+                      colspan: 2
+                    }
+                  ],
+                  rows: [
+                    [
+                      '1 class per week',
+                      '$85.00'
+                    ],
+                    [
+                      '2 classes per week',
+                      '$135.00'
+                    ],
+                    [
+                      '3 classes per week',
+                      '$185.00'
+                    ],
+                    [
+                      '4 classes per week',
+                      '$235.00'
+                    ]
+                  ]
+                }
+              ]
+          } %>
+
+          <%= render 'components/accordion_table', accordion: accordion %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

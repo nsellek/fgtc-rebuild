@@ -9,3 +9,22 @@ $red: #c00;
     }
   }
 }
+
+$opacity-steps: (
+  0: 0,
+  1: 0.2,
+  2: 0.4,
+  3: 0.6,
+  4: 0.8,
+  5: 1
+);
+
+@each $step, $value in $opacity-steps {
+  .opacity-#{$step} {
+    opacity: $value !important;
+  }
+
+  .bg-info-o-#{$step} {
+    background-color: rgba(13, 202, 240, $value);
+  }
+}
